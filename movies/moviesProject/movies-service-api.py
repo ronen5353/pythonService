@@ -13,7 +13,7 @@ api = Flask(__name__)
 @api.route('/loadAllMovies', methods=['GET'])
 def loadAllData():
     data = {
-        "database": "movies",
+        "database": "final-project",
         "collection": "movies",
     }
     mongo_obj = MongoAPI(data)
@@ -67,8 +67,8 @@ def getMovieById(id):
 
 if __name__ == '__main__':
     data = {
-        "database": "movies",
-        "collection": "predictedMovies",
+        "database": "final-project",
+        "collection": "recommendations",
     }
     mongo_obj = MongoAPI(data)
     # print(json.dumps(mongo_obj.read(), indent=4))
